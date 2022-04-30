@@ -1,34 +1,35 @@
 
 const items = require ('../Items')
 
+// Item Schema
+const Item = {
+    type: 'object',
+        properties: {
+            id: {type: 'integer'},
+            name: {type: 'string'}
+        } 
+}
+
+
+
+
 // Option for get all items
 const getItemsOpts = {
     schema: {
         response : {
             200: {
                 type: 'array',
-                items: {
-                    type: 'object',
-                    properties: {
-                        id: {type: 'integer'},
-                        name: {type: 'string'}
-                    }
-                }
+                items: Item
             }
         }
     }
 }
 
+// Option for get all items
 const getItemOpts = {
     schema: {
         response : {
-            200: {
-                type: 'object',
-                    properties: {
-                        id: {type: 'integer'},
-                        name: {type: 'string'}
-                    } 
-            }
+            200: Item
         }
     }
 }
