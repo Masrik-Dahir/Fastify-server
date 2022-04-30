@@ -1,5 +1,4 @@
-
-const items = require ('../Items')
+const {getItems, getItem} = require('../controllers/items')
 
 // Item Schema
 const Item = {
@@ -11,8 +10,6 @@ const Item = {
 }
 
 
-
-
 // Option for get all items
 const getItemsOpts = {
     schema: {
@@ -20,9 +17,10 @@ const getItemsOpts = {
             200: {
                 type: 'array',
                 items: Item
-            }
-        }
-    }
+            },
+        },
+    },
+    handler: getItems,
 }
 
 // Option for get all items
@@ -30,22 +28,19 @@ const getItemOpts = {
     schema: {
         response : {
             200: Item
-        }
-    }
+        },
+    },
+    handler: getItem,
 }
 
 function itemRoutes  (fastify, options, done) {
     // Get all items
-    fastify.get('/items', getItemsOpts, (req, reply) => {
-        reply.send(items)
-    })
+    fastify.get('/items', getItemsOpts)
     
     // Get single items
-    fastify.get('/items/:id', getItemOpts, (req, reply) => {
-        const {id} = req.params
-        const item = items.find(item => item.id === id)
-        reply.send(item)
-    })
+    fastify.get('/items/:id', getItemOpts)
+
+    
     done()
 }
 module.exports = itemRoutes
