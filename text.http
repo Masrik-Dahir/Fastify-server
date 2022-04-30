@@ -25,5 +25,7 @@ PUT http://127.0.0.1:5000/items/5 HTTP/1.1
 Content-Type: application/json
 
 {
-    "email": null
+    "name": "akash",
+    "email": "a@vcu.edu",
+    "department_id": "50"
 }

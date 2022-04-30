@@ -58,15 +58,10 @@ const updateItem = (req, reply) => {
     const {manager_id} = req.body
     const {department_id} = req.body
 
-    items = items.map(item => (item.id === id ? {id, name} : item))
-    items = items.map(item => (item.id === id ? {id, email} : item))
-    items = items.map(item => (item.id === id ? {id, phone} : item))
-    items = items.map(item => (item.id === id ? {id, hire_date} : item))
-    items = items.map(item => (item.id === id ? {id, job_id} : item))
-    items = items.map(item => (item.id === id ? {id, salary} : item))
-    items = items.map(item => (item.id === id ? {id, commission_pct} : item))
-    items = items.map(item => (item.id === id ? {id, manager_id} : item))
-    items = items.map(item => (item.id === id ? {id, department_id} : item))
+
+    items = items.map(item => (item.id === id ? {id, name, email, phone, hire_date, 
+                                                job_id, salary, commission_pct, 
+                                                manager_id, department_id} : item))
 
     item = items.find(item => item.id === id)
 
