@@ -5,7 +5,15 @@ const Item = {
     type: 'object',
         properties: {
             id: {type: 'string'},
-            name: {type: 'string'}
+            name: {type: 'string'},
+            department_id: {type: 'string'},
+            email: {type: 'string'},
+            phone_number: {type: 'string'},
+            hire_date: {type: 'string'},
+            job_id: {type: 'string'},
+            salary: {type: 'integer'},
+            commission_pct: {type: 'number'},
+            manager_id: {type: 'string'}
         } 
 }
 

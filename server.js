@@ -4,7 +4,7 @@ fastify.register(require('fastify-swagger'), {
     routePrefix: '/docs',
     swagger: {
         info: {
-            title: 'fastify-api'
+            title: 'HTTP API using Fastify'
         }
     }
 })
