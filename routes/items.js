@@ -4,7 +4,7 @@ const {getItems, getItem, addItem} = require('../controllers/items')
 const Item = {
     type: 'object',
         properties: {
-            id: {type: 'integer'},
+            id: {type: 'string'},
             name: {type: 'string'}
         } 
 }
@@ -36,6 +36,15 @@ const getItemOpts = {
 // Option for get all items
 const postItemOps = {
     schema: {
+        body:{
+            type: 'object',
+            required: ['name'],
+            properties: {
+                name: {
+                    type: 'string'
+                }
+            }
+        },
         response : {
             200: Item
         },
