@@ -74,7 +74,7 @@ const addItem = (req, reply) => {
         if (err) console.log(err);
         else {
             console.log(data);
-            // reply.code(201).send(data);
+            reply.code(201).send({message: `Item #METADATA#${projectId} has been added`});
         }
     });
 
@@ -129,7 +129,7 @@ const updateItem = (req, reply) => {
     
     dynamodb.update(params, function(err, data) {
         if (err) console.log(err);
-        else reply.send(data);
+        else reply.send({message: `Item ${id} has been updated`});
     });
 }
 

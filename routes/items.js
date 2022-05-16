@@ -59,7 +59,14 @@ const postItemOpts = {
             type: 'object',
         },
         response : {
-            201: Item
+            201: {
+                type: 'object',
+                properties: {
+                    message: {
+                        type: 'string'
+                    }
+                }
+            }
         },
     },
     handler: addItem,
@@ -86,7 +93,14 @@ const deleteItemOpts = {
 const updateItemOpts = {
     schema: {
         response : {
-            200: Item
+            200: {
+                type: 'object',
+                properties: {
+                    message: {
+                        type: 'string'
+                    }
+                }
+            }
         },
     },
     handler: updateItem,
