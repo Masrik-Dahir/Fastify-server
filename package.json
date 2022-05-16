@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Configure:",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -14,9 +14,18 @@
     "date-and-time": "^2.3.1",
     "fastify": "^3.29.0",
     "fastify-swagger": "^5.2.0",
+    "serverless-dynamodb-local": "^0.2.40",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Masrik-Dahir/Fastify_server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Masrik-Dahir/Fastify_server/issues"
+  },
+  "homepage": "https://github.com/Masrik-Dahir/Fastify_server#readme"
 }
