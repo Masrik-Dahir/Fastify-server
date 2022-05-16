@@ -54,29 +54,30 @@ const getItem = (req, reply) => {
 
 const addItem = (req, reply) => {
     const {name} = req.body
-    const {email} = req.body
-    const {phone} = req.body
-    const {hire_date} = req.body
-    const {job_id} = req.body
-    const {salary} = req.body
-    const {commission_pct} = req.body
-    const {manager_id} = req.body
-    const {department_id} = req.body
-    const item= {
-        id: uuidv4(),
-        name,
-        email,
-        phone, 
-        hire_date,
-        job_id,
-        salary,
-        commission_pct,
-        manager_id,
-        department_id
+    const {tier} = req.body
 
-    }
-    items = [...items, item]
-    reply.code(201).send(item)
+
+    const happyIncOrgId = "c89608cf-39a7-4589-9eea-173ae87192da";
+    const projectId = uuidv4();
+
+    var params = {
+        TableName : 'happy-projects',
+        Item: {
+        PK: `ORG#${happyIncOrgId}`,
+        SK: `#METADATA#${projectId}`,
+        name: name,
+        tier: tier
+        }
+    };
+    
+    dynamodb.put(params, function(err, data) {
+        if (err) console.log(err);
+        else {
+            console.log(data);
+            // reply.code(201).send(data);
+        }
+    });
+
 
 
 }
@@ -84,31 +85,52 @@ const addItem = (req, reply) => {
 const deleteItem = (req, reply) => {
     const {id} = req.params
 
-    items = items.filter(item => item.id !== id)
-
-    reply.send({message: `Item ${id} has been removed`})
+    const PK_Id = "c89608cf-39a7-4589-9eea-173ae87192da";
+    const SK_Id = id;
+    var params = {
+        TableName : 'happy-projects',
+        Key: {
+            PK : `ORG#${PK_Id}`, 
+            SK: `#METADATA#${SK_Id}`
+        }
+    };
+    
+    dynamodb.delete(params, function(err, data) {
+        if (err) console.log(err);
+        else reply.send({message: `Item ${id} has been removed`});
+    });
 }
 
 const updateItem = (req, reply) => {
     const {id} = req.params
-    const {name} = req.body
-    const {email} = req.body
-    const {phone} = req.body
-    const {hire_date} = req.body
-    const {job_id} = req.body
-    const {salary} = req.body
-    const {commission_pct} = req.body
-    const {manager_id} = req.body
-    const {department_id} = req.body
+
+    const happyIncOrgId = "c89608cf-39a7-4589-9eea-173ae87192da";
+    var params = {
+        TableName: 'happy-projects',
+        Key: { 
+            PK : `ORG#${happyIncOrgId}`, 
+            SK: `#METADATA#${id}`
+        },
+        UpdateExpression: 'set #name = :name',
+        ExpressionAttributeNames: {'#name' : 'name'},
+        
+        ExpressionAttributeValues: {
+        ':name' : "Masrik"
+        },
+
+        UpdateExpression: 'set #tier = :tier',
+        ExpressionAttributeNames: {'#tier' : 'tier'},
+        ExpressionAttributeValues: {
+            ':tier' : 'Dahir'
+        },
 
 
-    items = items.map(item => (item.id === id ? {id, name, email, phone, hire_date, 
-                                                job_id, salary, commission_pct, 
-                                                manager_id, department_id} : item))
-
-    item = items.find(item => item.id === id)
-
-    reply.send(item)
+    };
+    
+    dynamodb.update(params, function(err, data) {
+        if (err) console.log(err);
+        else reply.send(data);
+    });
 }
 
 module.exports = {

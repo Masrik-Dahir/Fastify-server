@@ -57,12 +57,6 @@ const postItemOpts = {
     schema: {
         body:{
             type: 'object',
-            required: ['SK'],
-            properties: {
-                name: {
-                    type: 'string'
-                }
-            }
         },
         response : {
             201: Item
