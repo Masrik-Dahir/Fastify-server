@@ -1,5 +1,4 @@
 const { v4:uuidv4 } = require('uuid')
-let items = require ('../Items')
 
 const AWS = require("aws-sdk");
 AWS.config.update ({region: "us-east-1"});
