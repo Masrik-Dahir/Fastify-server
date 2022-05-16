@@ -4,23 +4,18 @@ const {getItems, getItem, addItem, deleteItem, updateItem} = require('../control
 const Item = {
     type: 'object',
         properties: {
-            // id: {type: 'string'},
-            // name: {type: 'string'},
-            // department_id: {type: 'string'},
-            // email: {type: 'string'},
-            // phone_number: {type: 'string'},
-            // hire_date: {type: 'string'},
-            // job_id: {type: 'string'},
-            // salary: {type: 'integer'},
-            // commission_pct: {type: 'number'},
-            // manager_id: {type: 'string'},
-
+        
             Item:{
-                org_id: {type: 'string'},
                 SK: {type: 'string'},
                 PK: {type: 'string'},
                 name: {type: 'string'},
-                tier: {type: 'string'},
+                email: {type: 'string'},
+                phone_number: {type: 'string'},
+                hire_date: {type: 'string'},
+                job_id: {type: 'string'},
+                salary: {type: 'integer'},
+                commission_pct: {type: 'number'},
+                manager_id: {type: 'string'}
             }
         } 
 }

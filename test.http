@@ -3,7 +3,7 @@ GET http://127.0.0.1:5000/items HTTP/1.1
 
 
 ### GET Single items 
-GET http://127.0.0.1:5000/items/1d125599-9cc1-447d-8885-459f9258f194 HTTP/1.1
+GET http://127.0.0.1:5000/items/fe699c5b-1ce5-4ca9-942d-dabaae7b567c HTTP/1.1
 
 
 ### ADD Single items 
@@ -11,19 +11,31 @@ POST http://127.0.0.1:5000/items  HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "just a name",
-    "tier": "no tier"
+    "name": "second name",
+    "email": "test2@capitalone.com",
+    "phone_number": "1231231236",
+    "hire_date": "2015-01-01",
+    "job_id": "8",
+    "salary": 90000,
+    "commission_pct": 1,
+    "manager_id": "4"
 }
 
 ### Delete Single item with id
-DELETE http://127.0.0.1:5000/items/c89608cf-39a7-4589-9eea-173ae87192da HTTP/1.1
+DELETE http://127.0.0.1:5000/items/a409733d-d576-4e76-92c9-209b5178878e HTTP/1.1
 
 
 ### Update a single item
-PUT http://127.0.0.1:5000/items/1d125599-9cc1-447d-8885-459f9258f194 HTTP/1.1
+PUT http://127.0.0.1:5000/items/e925babb-99ab-4992-a752-a991befe251f HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Dahir",
-    "tier": "Dahir"
+    "name": "s1",
+    "email": "s2@capitalone.com",
+    "phone_number": "1111111111",
+    "hire_date": "1000-01-01",
+    "job_id": "100",
+    "salary": 150000,
+    "commission_pct": 100,
+    "manager_id": "20"
 }
