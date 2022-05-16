@@ -1,14 +1,55 @@
 const { v4:uuidv4 } = require('uuid')
 let items = require ('../Items')
 
+const AWS = require("aws-sdk");
+AWS.config.update ({region: "us-east-1"});
+const dynamodb = new AWS.DynamoDB.DocumentClient();
+
 const getItems = (req, reply) => {
-    reply.send(items)
+    // reply.send(items)
+
+    const happyIncOrgId = "c89608cf-39a7-4589-9eea-173ae87192da";
+    var params = {
+        TableName: 'happy-projects',
+        KeyConditionExpression: '#PK = :PK and begins_with(#SK, :SK)',
+        ExpressionAttributeNames: {'#PK': 'PK', '#SK' : 'SK'},
+        ExpressionAttributeValues: {
+        ':PK': `ORG#${happyIncOrgId}`,
+        ':SK': `#METADATA#`
+        }
+    };
+        
+    dynamodb.query(params, function(err, data) {
+        if (err) console.log(err);
+        else {
+            console.log(data);
+            reply.send(data);
+        }
+    });
 }
 
 const getItem = (req, reply) => {
     const {id} = req.params
-    const item = items.find(item => item.id === id)
-    reply.send(item)
+    // const item = items.find(item => item.id === id)
+    
+
+    const happyIncOrgId = "c89608cf-39a7-4589-9eea-173ae87192da";
+    var params = {
+        TableName : 'happy-projects',
+        Key: {
+            PK : `ORG#${happyIncOrgId}`, 
+            SK: `#METADATA#${id}`
+        }
+    };
+        
+    dynamodb.get(params, function(err, data) {
+        if (err) console.log(err);
+        else {
+            console.log(data);
+            reply.send(data)
+        }
+    });
+    
 }
 
 const addItem = (req, reply) => {
@@ -36,6 +77,8 @@ const addItem = (req, reply) => {
     }
     items = [...items, item]
     reply.code(201).send(item)
+
+
 }
 
 const deleteItem = (req, reply) => {

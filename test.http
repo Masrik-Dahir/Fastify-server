@@ -3,7 +3,7 @@ GET http://127.0.0.1:5000/items HTTP/1.1
 
 
 ### GET Single items 
-GET http://127.0.0.1:5000/items/1 HTTP/1.1
+GET http://127.0.0.1:5000/items/1d125599-9cc1-447d-8885-459f9258f194 HTTP/1.1
 
 
 ### ADD Single items 
