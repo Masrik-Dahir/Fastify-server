@@ -22,7 +22,7 @@ const getItems = (req, reply) => {
         if (err) console.log(err);
         else {
             console.log(data);
-            reply.send(data);
+            reply.send(JSON.stringify(data.Items, null, 2));
         }
     });
 }
@@ -45,7 +45,7 @@ const getItem = (req, reply) => {
         if (err) console.log(err);
         else {
             console.log(data);
-            reply.send(data)
+            reply.send(JSON.stringify(data.Item, null, 2))
         }
     });
     

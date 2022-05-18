@@ -6,7 +6,10 @@ const Item = {
         properties: {
         
             Item:{
-                SK: {type: 'string'},
+                SK: {
+                    type: 'string'
+                    
+                },
                 PK: {type: 'string'},
                 name: {type: 'string'},
                 email: {type: 'string'},
@@ -20,17 +23,24 @@ const Item = {
         } 
 }
 
+const Summery = {
+    type: 'object',
+        properties: {
+        
+            Summery:{
+                "Count": {type: 'integer'},
+                "ScannedCount": {type: 'integer'}
+                }
+        } 
+}
+
 
 // Option for get all items
 const getItemsOpts = {
     schema: {
         response : {
             200: {
-                Items:{
-                    Item
-                },
-                Count: {type: 'string'},
-                ScannedCount: {type: 'string'}
+                Item
             },
         },
     },
