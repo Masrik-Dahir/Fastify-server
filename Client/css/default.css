@@ -1,6 +1,5 @@
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "georgia", sans-serif}
 .centerblock{
-    background-color: red;
     padding-top: 100px;
 }
 
@@ -70,10 +69,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "georgia", sans-serif}
     width: 100%;
 }
 
-.color{
-    color: DarkSlateGray
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -113,15 +108,45 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "georgia", sans-serif}
 }
 
 button {
-    background-color: lightskyblue; /* Green */
-    border: none;
+    background-color: whitesmoke; /* Green */
     color: black;
-    padding: 5px 10px;
+    padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+
+
+    border-top-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+
 }
+
+/*button:hover {*/
+/*    animation: morph 3s linear infinite;*/
+/*}*/
+/*@keyframes morph{*/
+/*    0%,100%{*/
+/*        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;*/
+/*        transform: translate3d(0,0,0) rotateZ(0.01deg);*/
+/*    }*/
+/*    34%{*/
+/*        border-radius: 64% 30% 46% 54% / 50% 29% 71% 70%;*/
+/*        transform:  translate3d(0,5px,0) rotateZ(0.01deg);*/
+/*    }*/
+/*    67%{*/
+/*        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;*/
+/*        transform: translate3d(0,-3px,0) rotateZ(0.01deg);*/
+/*    }*/
+/*}*/
+
+
 
 /* Popup container */
 .popup {
@@ -174,4 +199,38 @@ button {
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
+}
+
+
+
+
+.btn {
+    text-align: center;
+    font-size:16px;
+    text-transform:uppercase;
+    height:auto;
+    vertical-align: middle;
+    line-height: normal;
+    width:auto;
+    border:5px solid darkgrey;
+    border-radius: 10px;
+    font-family:Allan;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btn:active {
+    color:aliceblue;
+    transform: scale(0.99,0.99);
+}
+
+.three {
+    background: linear-gradient(whitesmoke, silver);
+    border:2px solid gray;
+    transition: all 0.4s;
+    transition-timing-function:cubic-bezier(0.5, 3, 0, 1);
+}
+
+.three:hover {
+    transform:scale(1.2,1.2);
 }

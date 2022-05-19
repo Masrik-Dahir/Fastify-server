@@ -1,22 +1,32 @@
-// let app2 = Vue.createApp({
-//     data: function(){
-//         return {
-//             greeting: '',
-//         }
-//     }
-// })
-// app2.mount('#app2')
-
 var app = new Vue({
     el: '#app',
-    data: {
-        users: []
-    },
-    mounted: function() {
-        let work = 'https://jsonplaceholder.typicode.com/users';
+    data: function() {
+        return {
+            users: [],
+            greeting: '',
+            res: '',
+            allEmployee: true,
+            view_emp_text: "SHOW"
+        }
 
+    },
+    methods:{
+        toggleBox() {
+            this.res = 'http://127.0.0.1:5000/items/' + this.greeting;
+            this.allEmployee = !this.allEmployee;
+
+            if (this.view_emp_text == "SHOW"){
+                this.view_emp_text = "HIDE"
+            }
+            else{
+                this.view_emp_text = "SHOW"
+            }
+
+        },
+    },
+
+    mounted: function() {
         let all_item  = 'http://127.0.0.1:5000/items';
-        let single_item = 'http://127.0.0.1:5000/items/0953753c-3268-48e3-ad12-62734c24dd59';
 
         axios.get(all_item)
             .then(response => {
@@ -27,4 +37,5 @@ var app = new Vue({
                 console.log(error);
             });
     }
+
 })

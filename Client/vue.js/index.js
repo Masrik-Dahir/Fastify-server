@@ -1,13 +1,19 @@
 var app = new Vue({
     el: '#app',
     data: {
-      users: []
+        users: [],
+        isVisible: false,
+        id: document.getElementById("new").value,
+        ind: '',
+    },
+    methods:{
+        toggleBox() {
+            this.isVisible = !this.isVisible;
+        },
     },
     mounted: function() {
-      let work = 'https://jsonplaceholder.typicode.com/users';
 
       let all_item  = 'http://127.0.0.1:5000/items';
-      let single_item = 'http://127.0.0.1:5000/items/0953753c-3268-48e3-ad12-62734c24dd59';
 
       axios.get(all_item)
           .then(response => {

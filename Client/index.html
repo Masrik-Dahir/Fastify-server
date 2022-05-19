@@ -37,11 +37,17 @@
 
 
   <div class="container mt-4" id="app">
-    <button style="background: lightgreen" onclick="window.location.href='page2.html'">
+    <button class="btn three"  onclick="">
       Add Employee
     </button>
     <br>
     <br>
+
+
+<!--    <button class="btn three" @click.left="toggleBox">-->
+<!--      Detail-->
+<!--    </button>-->
+
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -49,29 +55,56 @@
           <th scope="col">Employee ID</th>
           <th scope="col">Name</th>
           <th scope="col">Detail</th>
-          <!-- <th scope="col">Email</th>
-          <th scope="col">Phone Number</th>
-          <th scope="col">City</th> -->
         </tr>
       </thead>
       <tbody>
         <tr v-for="user, index in users">
+
           <th scope="row">{{ index + 1 }}</th>
           <td>{{user.SK.replace("#METADATA#", "")}}</td>
           <td>{{user.name}}</td>
           <td>
-            <button>
+            <button class="btn three" id = "new" @click.left="toggleBox">
               Detail
             </button>
 
           </td>
-          <!-- <td>{{ user.email.toLowerCase() }}</td>
-          <td>{{ user.website }}</td>
-          <td>{{ user.address.city }}</td> -->
         </tr>
       </tbody>
     </table>
+
+
+<!--    <div v-if="isVisible">-->
+<!--      <table class="table table-bordered">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--          <th scope="col">#</th>-->
+<!--          <th scope="col">Employee ID</th>-->
+<!--          <th scope="col">Name</th>-->
+<!--          <th scope="col">Detail</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr v-for="user, index in users">-->
+<!--          <th scope="row">{{ index + 1 }}</th>-->
+<!--          <td v-if= 'user.SK === id '>{{user.SK.replace("#METADATA#", "")}}</td>-->
+<!--          <td v-if= 'user.SK === id '>{{user.name}}</td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--      </table>-->
+<!--    </div>-->
+
+
+
+
+
+
+
+
+
   </div>
+
+
 
 </body>
 </html>
