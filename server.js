@@ -4,8 +4,9 @@ const fastify = require('fastify', 'cors')({logger: true})
 fastify.addHook('onSend', function(request, reply, payload, done) {
     reply.headers({
         "Access-Control-Allow-Origin": "*",
-        // "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        "Access-Control-Allow-Methods": "POST"
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
+        "Access-Control-Allow-Headers": "append,delete,entries,foreach,get,has,keys,set,values,Authorization",
+        "Access-Control-Expose-Headers": "Content-Length, X-JSON",
     })
     done()
   })

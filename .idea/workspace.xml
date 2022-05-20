@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8de9ea0c-3720-40b6-858a-9c677459a0f0" name="Changes" comment="works so far">
-      <change afterPath="$PROJECT_DIR$/Client/vue.js/add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/vue.js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/vue.js/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/vue.js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/vue.js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/items.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.sh" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.http" beforeDir="false" afterPath="$PROJECT_DIR$/test.http" afterDir="false" />
     </list>
