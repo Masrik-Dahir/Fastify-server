@@ -35,7 +35,7 @@
 </div>
 <br>
 
-<div class="container mt-4" id="app">
+<div class="container mt-4" id="app" v-cloak>
     <div>Search by Employee ID: <input v-model="greeting" />
         <button style="float: right;" class="btn three" @click.left="toggleBox">
         {{ view_emp_text }} All Employees
@@ -58,7 +58,6 @@
                 <th scope="col">Hire Date</th>
                 <th scope="col">Commission (%)</th>
                 <th scope="col">Job ID</th>
-                <th scope="col">Garbage</th>
 
 
             </tr>
@@ -75,7 +74,6 @@
                 <td v-if= 'user.SK === "#METADATA#" + greeting'>{{user.hire_date}}</td>
                 <td v-if= 'user.SK === "#METADATA#" + greeting'>{{user.commission_pct}}</td>
                 <td v-if= 'user.SK === "#METADATA#" + greeting'>{{user.job_id}}</td>
-                <td v-if= 'user.SK === "#METADATA#" + greeting'>{{ greeting }}</td>
 
             </tr>
             </tbody>
@@ -97,7 +95,6 @@
                 <th scope="col">Hire Date</th>
                 <th scope="col">Commission (%)</th>
                 <th scope="col">Job ID</th>
-                <th scope="col">Garbage</th>
 
 
             </tr>
@@ -114,7 +111,6 @@
                     <td>{{user.hire_date}}</td>
                     <td>{{user.commission_pct}}</td>
                     <td>{{user.job_id}}</td>
-                    <td>{{ greeting }}</td>
 
                 </tr>
                 </tbody>

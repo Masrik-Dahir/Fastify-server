@@ -11,7 +11,7 @@ POST http://127.0.0.1:5000/items  HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "second name",
+    "name": "1",
     "email": "test2@capitalone.com",
     "phone_number": "1231231236",
     "hire_date": "2015-01-01",

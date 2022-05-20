@@ -1,10 +1,15 @@
-const fastify = require('fastify')({logger: true})
+const express = require('express');
+
+const fastify = require('fastify', 'cors')({logger: true})
 fastify.addHook('onSend', function(request, reply, payload, done) {
-    reply.headers({'content-type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'})
-    // headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
-    // headers.append('Access-Control-Allow-Credentials', 'true');
+    reply.headers({
+        "Access-Control-Allow-Origin": "*",
+        // "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+        "Access-Control-Allow-Methods": "POST"
+    })
     done()
   })
+  
 fastify.register(require('fastify-swagger'), {
     exposeRoute: true,
     routePrefix: '/docs',
@@ -14,7 +19,25 @@ fastify.register(require('fastify-swagger'), {
         }
     }
 })
+
+
 fastify.register(require('./routes/items'))
+
+// fastify.register(require('@fastify/cors'), function (instance) {
+
+//     return (req, callback) => {
+//       let corsOptions;
+//       const origin = req.headers.origin
+//       // do not include CORS headers for requests from localhost
+//       const hostname = new URL(origin).hostname
+//       if(hostname === "localhost"){
+//         corsOptions = { origin: false }
+//       } else {
+//         corsOptions = { origin: true }
+//       }
+//       callback(null, corsOptions) // callback expects two parameters: error and options
+//     }
+//   })
 
 const PORT = 5000
 

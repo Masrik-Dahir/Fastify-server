@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8de9ea0c-3720-40b6-858a-9c677459a0f0" name="Changes" comment="works so far">
+      <change afterPath="$PROJECT_DIR$/Client/vue.js/add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/css/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/css/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/vue.js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/vue.js/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/vue.js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/vue.js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/items.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.sh" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.http" beforeDir="false" afterPath="$PROJECT_DIR$/test.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -49,7 +58,10 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="Node.js.index.js">
+    <configuration name="add.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Server - Copy/Client/add.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="detail.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Server - Copy/Client/detail.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -59,8 +71,13 @@
     <configuration name="detail.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Client/vue.js/detail.js" working-dir="$PROJECT_DIR$/Client/vue.js">
       <method v="2" />
     </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Client/vue.js/index.js" working-dir="$PROJECT_DIR$/Client/vue.js">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="JavaScript Debug.add.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.detail.html" />
         <item itemvalue="Node.js.detail.js" />
@@ -80,6 +97,7 @@
       <workItem from="1652844925882" duration="137000" />
       <workItem from="1652915126820" duration="5456000" />
       <workItem from="1652922767383" duration="11824000" />
+      <workItem from="1652974750590" duration="8514000" />
     </task>
     <task id="LOCAL-00001" summary="works so far">
       <created>1652844964623</created>

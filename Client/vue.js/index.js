@@ -3,12 +3,14 @@ var app = new Vue({
     data: {
         users: [],
         isVisible: false,
-        id: document.getElementById("new").value,
+        // id: document.getElementById(``).value,
         ind: '',
     },
     methods:{
-        toggleBox() {
-            this.isVisible = !this.isVisible;
+        toggleBox(id) {
+            this.ind = id;
+            console.log(this.ind);
+            this.isVisible = true;
         },
     },
     mounted: function() {
