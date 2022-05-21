@@ -16,7 +16,7 @@ var app = new Vue({
             this.res = 'http://127.0.0.1:5000/items/' + this.greeting;
             this.allEmployee = !this.allEmployee;
 
-            if (this.view_emp_text == "SHOW"){
+            if (this.view_emp_text === "SHOW"){
                 this.view_emp_text = "HIDE"
             }
             else{

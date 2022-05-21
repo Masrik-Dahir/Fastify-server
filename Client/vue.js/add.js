@@ -33,44 +33,44 @@ app.component('custom-form', {
               <tbody>
                 <tr>
                 <td>Name</td>
-                  <td> <custom-input v-model="name" /> </td>                  
+                  <td> <custom-name v-model="name" /> </td>                  
                 </tr>
                 
-                <tr>
-                <td>Email Address</td>
-                  <td> <custom-input v-model="email" /> </td>                  
-                </tr>
+<!--                <tr>-->
+<!--                <td>Email Address</td>-->
+<!--                  <td> <custom-input v-model="email" /> </td>                  -->
+<!--                </tr>-->
                 
                 <tr>
                 <td>Phone Number</td>
-                  <td> <custom-input v-model="phone_number" /> </td>                  
+                  <td> <custom-number v-model="phone_number" /> </td>                  
                 </tr>
                 
-                <tr>
-                <td>Hire Date</td>
-                  <td> <custom-date v-model="hire_date" /> </td>                  
-                </tr>
-                
-                <tr>
-                <td>Job Id</td>
-                  <td> <custom-input v-model="job_id" /> </td>                  
-                </tr>
-                
-                
-                <tr>
-                <td>Salary</td>
-                  <td> <custom-number v-model="salary" /> </td>                  
-                </tr>
-                
-                <tr>
-                <td>Commission (%)</td>
-                  <td> <custom-number v-model="commission_pct" /> </td>                  
-                </tr>
-                
-                <tr>
-                <td>Manager ID</td>
-                  <td> <custom-input v-model="manager_id" /> </td>                  
-                </tr>
+<!--                <tr>-->
+<!--                <td>Hire Date</td>-->
+<!--                  <td> <custom-date v-model="hire_date" /> </td>                  -->
+<!--                </tr>-->
+<!--                -->
+<!--                <tr>-->
+<!--                <td>Job Id</td>-->
+<!--                  <td> <custom-input v-model="job_id" /> </td>                  -->
+<!--                </tr>-->
+<!--                -->
+<!--                -->
+<!--                <tr>-->
+<!--                <td>Salary</td>-->
+<!--                  <td> <custom-number v-model="salary" /> </td>                  -->
+<!--                </tr>-->
+<!--                -->
+<!--                <tr>-->
+<!--                <td>Commission (%)</td>-->
+<!--                  <td> <custom-number v-model="commission_pct" /> </td>                  -->
+<!--                </tr>-->
+<!--                -->
+<!--                <tr>-->
+<!--                <td>Manager ID</td>-->
+<!--                  <td> <custom-input v-model="manager_id" /> </td>                  -->
+<!--                </tr>-->
                 
                 <tr>
                 <td>Date of Birth</td>
@@ -103,16 +103,16 @@ app.component('custom-form', {
     data(){
         return{
             title: "Create Employee",
-            name: "",
-            email: "",
-            phone_number: "",
-            hire_date: "",
-            job_id: "",
-            salary: "",
-            commission_pct: "",
-            manager_id: "",
-            date_of_birth: "",
-            physical_address: "",
+            name: null,
+            email: null,
+            phone_number: null,
+            hire_date: null,
+            job_id: null,
+            salary: null,
+            commission_pct: null,
+            manager_id: null,
+            date_of_birth: null,
+            physical_address: null,
 
             emailLabel: "Email",
             passwordLabel: "Password",
@@ -121,8 +121,6 @@ app.component('custom-form', {
     },
     methods: {
         handleSubmit() {
-            // axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-            // axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
             let all_item  = 'http://127.0.0.1:5000/items';
 
@@ -134,13 +132,13 @@ app.component('custom-form', {
 
             let data = {
                 "name": this.name,
-                "email": this.email,
+                // "email": this.email,
                 "phone_number": this.phone_number,
-                "hire_date": this.hire_date,
-                "job_id": this.job_id,
-                "salary": this.salary,
-                "commission_pct": this.commission_pct,
-                "manager_id": this.manager_id,
+                // "hire_date": this.hire_date,
+                // "job_id": this.job_id,
+                // "salary": this.salary,
+                // "commission_pct": this.commission_pct,
+                // "manager_id": this.manager_id,
                 "date_of_birth": this.date_of_birth,
                 "physical_address": this.physical_address,
             }
@@ -154,9 +152,29 @@ app.component('custom-form', {
                     console.log(error);
                 });
 
-            console.log(this.email, this.password);
         }
     }
+})
+app.component('custom-name', {
+    template:
+        `
+    <label>
+        {{label}}
+        <input type="text" v-model="inputValue" required>
+    </label>
+    `,
+    props: ['label', 'modelValue'],
+    computed:{
+        inputValue: {
+            get() {
+                return this.modelValue;
+            },
+            set(value) {
+                this.$emit('update:modelValue', value);
+            }
+        }
+    }
+
 })
 app.component('custom-input', {
     template:
@@ -206,7 +224,7 @@ app.component('custom-number', {
         `
     <label>
         {{label}}
-        <input type="number" v-model="inputValue">
+        <input type="number" step=0.00001 v-model="inputValue">
     </label>
     `,
     props: ['label', 'modelValue'],

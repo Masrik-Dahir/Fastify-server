@@ -76,13 +76,15 @@
         <tr>
           <th scope="col">Employee ID</th>
           <th scope="col">Name</th>
-          <th scope="col">Email</th>
+<!--          <th scope="col">Email</th>-->
           <th scope="col">Phone Number</th>
 
-          <th scope="col">Manager ID</th>
-          <th scope="col">Hire Date</th>
-          <th scope="col">Commission (%)</th>
-          <th scope="col">Job ID</th>
+<!--          <th scope="col">Manager ID</th>-->
+<!--          <th scope="col">Hire Date</th>-->
+<!--          <th scope="col">Commission (%)</th>-->
+<!--          <th scope="col">Job ID</th>-->
+          <th scope="col">Date of Birth</th>
+          <th scope="col">Physical Address</th>
 
 
         </tr>
@@ -93,12 +95,14 @@
 
             <td v-if= 'user.SK === ind '>{{user.SK.replace("#METADATA#", "")}}</td>
             <td v-if= 'user.SK === ind'>{{user.name}}</td>
-            <td v-if= 'user.SK === ind'>{{user.email}}</td>
+<!--            <td v-if= 'user.SK === ind'>{{user.email}}</td>-->
             <td v-if= 'user.SK === ind'>{{user.phone_number}}</td>
-            <td v-if= 'user.SK === ind'>{{user.manager_id}}</td>
-            <td v-if= 'user.SK === ind'>{{user.hire_date}}</td>
-            <td v-if= 'user.SK === ind'>{{user.commission_pct}}</td>
-            <td v-if= 'user.SK === ind'>{{user.job_id}}</td>
+<!--            <td v-if= 'user.SK === ind'>{{user.manager_id}}</td>-->
+<!--            <td v-if= 'user.SK === ind'>{{user.hire_date}}</td>-->
+<!--            <td v-if= 'user.SK === ind'>{{user.commission_pct}}</td>-->
+<!--            <td v-if= 'user.SK === ind'>{{user.job_id}}</td>-->
+            <td v-if= 'user.SK === ind'>{{user.date_of_birth}}</td>
+            <td v-if= 'user.SK === ind'>{{user.physical_address}}</td>
 
           </tr>
           </tbody>

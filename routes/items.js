@@ -12,13 +12,13 @@ const Item = {
                 },
                 PK: {type: 'string'},
                 name: {type: 'string'},
-                email: {type: 'string'},
+                // email: {type: 'string'},
                 phone_number: {type: 'string'},
-                hire_date: {type: 'string'},
-                job_id: {type: 'string'},
-                salary: {type: 'integer'},
-                commission_pct: {type: 'number'},
-                manager_id: {type: 'string'},
+                // hire_date: {type: 'string'},
+                // job_id: {type: 'string'},
+                // salary: {type: 'integer'},
+                // commission_pct: {type: 'number'},
+                // manager_id: {type: 'string'},
                 date_of_birth: {type: 'string'},
                 physical_address: {type: 'string'},
             }
@@ -61,12 +61,17 @@ const getItemOpts = {
 // Option for adding items
 const postItemOpts = {
     schema: {
-        body:{
+        body: {
             type: 'object',
+            required: ['name'],
+            properties: {
+              name: { type: 'string' },
+            },
         },
+        
         response : {
             201: {
-                type: 'object',
+                type: 'object',                
                 properties: {
                     message: {
                         type: 'string'

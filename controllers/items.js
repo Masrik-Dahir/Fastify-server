@@ -52,13 +52,13 @@ const getItem = (req, reply) => {
 
 const addItem = (req, reply) => {
     const {name} = req.body
-    const {email} = req.body
+    // const {email} = req.body
     const {phone_number} = req.body
-    const {hire_date} = req.body
-    const {job_id} = req.body
-    const {salary} = req.body
-    const {commission_pct} = req.body
-    const {manager_id} = req.body
+    // const {hire_date} = req.body
+    // const {job_id} = req.body
+    // const {salary} = req.body
+    // const {commission_pct} = req.body
+    // const {manager_id} = req.body
     const {date_of_birth} = req.body
     const {physical_address} = req.body
 
@@ -72,13 +72,13 @@ const addItem = (req, reply) => {
         PK: `ORG#${happyIncOrgId}`,
         SK: `#METADATA#${projectId}`,
         name: name,
-        email: email,
+        // email: email,
         phone_number: phone_number,
-        hire_date: hire_date,
-        job_id: job_id,
-        salary: salary,
-        commission_pct: commission_pct,
-        manager_id: manager_id,
+        // hire_date: hire_date,
+        // job_id: job_id,
+        // salary: salary,
+        // commission_pct: commission_pct,
+        // manager_id: manager_id,
         date_of_birth: date_of_birth,
         physical_address: physical_address,
         }
@@ -118,13 +118,13 @@ const deleteItem = (req, reply) => {
 const updateItem = (req, reply) => {
     const {id} = req.params
     const {name} = req.body
-    const {email} = req.body
+    // const {email} = req.body
     const {phone_number} = req.body
-    const {hire_date} = req.body
-    const {job_id} = req.body
-    const {salary} = req.body
-    const {commission_pct} = req.body
-    const {manager_id} = req.body
+    // const {hire_date} = req.body
+    // const {job_id} = req.body
+    // const {salary} = req.body
+    // const {commission_pct} = req.body
+    // const {manager_id} = req.body
     const {date_of_birth} = req.body
     const {physical_address} = req.body
 
@@ -151,25 +151,25 @@ const updateItem = (req, reply) => {
     }
     
     // email
-    if(email !== undefined) {
-        var params = {
-            TableName: 'Employees',
-            Key: { 
-                PK : `ORG#${happyIncOrgId}`, 
-                SK: `#METADATA#${id}`
-            },
-            UpdateExpression: 'set #email = :email',
-            ExpressionAttributeNames: {'#email' : 'email'},
-            ExpressionAttributeValues: {
-                ':email' : email
-            },
-        };
+    // if(email !== undefined) {
+    //     var params = {
+    //         TableName: 'Employees',
+    //         Key: { 
+    //             PK : `ORG#${happyIncOrgId}`, 
+    //             SK: `#METADATA#${id}`
+    //         },
+    //         UpdateExpression: 'set #email = :email',
+    //         ExpressionAttributeNames: {'#email' : 'email'},
+    //         ExpressionAttributeValues: {
+    //             ':email' : email
+    //         },
+    //     };
         
-        dynamodb.update(params, function(err, data) {
-            if (err) console.log(err);
-            else reply.send({message: `Item ${id} has been updated`});
-        });
-    }
+    //     dynamodb.update(params, function(err, data) {
+    //         if (err) console.log(err);
+    //         else reply.send({message: `Item ${id} has been updated`});
+    //     });
+    // }
 
     // phone_number
     if(phone_number !== undefined) {
@@ -193,114 +193,114 @@ const updateItem = (req, reply) => {
     }
 
     // hire_date
-    if(hire_date !== undefined) {
-        var params = {
-            TableName: 'Employees',
-            Key: { 
-                PK : `ORG#${happyIncOrgId}`, 
-                SK: `#METADATA#${id}`
-            },
-            UpdateExpression: 'set #hire_date = :hire_date',
-            ExpressionAttributeNames: {'#hire_date' : 'hire_date'},
-            ExpressionAttributeValues: {
-                ':hire_date' : hire_date
-            },
-        };
+    // if(hire_date !== undefined) {
+    //     var params = {
+    //         TableName: 'Employees',
+    //         Key: { 
+    //             PK : `ORG#${happyIncOrgId}`, 
+    //             SK: `#METADATA#${id}`
+    //         },
+    //         UpdateExpression: 'set #hire_date = :hire_date',
+    //         ExpressionAttributeNames: {'#hire_date' : 'hire_date'},
+    //         ExpressionAttributeValues: {
+    //             ':hire_date' : hire_date
+    //         },
+    //     };
         
-        dynamodb.update(params, function(err, data) {
-            if (err) console.log(err);
-            else reply.send({message: `Item ${id} has been updated`});
-        });
-    }
+    //     dynamodb.update(params, function(err, data) {
+    //         if (err) console.log(err);
+    //         else reply.send({message: `Item ${id} has been updated`});
+    //     });
+    // }
 
     // job_id
-    if(job_id !== undefined) {
-        var params = {
-            TableName: 'Employees',
-            Key: { 
-                PK : `ORG#${happyIncOrgId}`, 
-                SK: `#METADATA#${id}`
-            },
-            UpdateExpression: 'set #job_id = :job_id',
-            ExpressionAttributeNames: {'#job_id' : 'job_id'},
-            ExpressionAttributeValues: {
-                ':job_id' : job_id
-            },
-        };
+    // if(job_id !== undefined) {
+    //     var params = {
+    //         TableName: 'Employees',
+    //         Key: { 
+    //             PK : `ORG#${happyIncOrgId}`, 
+    //             SK: `#METADATA#${id}`
+    //         },
+    //         UpdateExpression: 'set #job_id = :job_id',
+    //         ExpressionAttributeNames: {'#job_id' : 'job_id'},
+    //         ExpressionAttributeValues: {
+    //             ':job_id' : job_id
+    //         },
+    //     };
         
-        dynamodb.update(params, function(err, data) {
-            if (err) console.log(err);
-            else reply.send({message: `Item ${id} has been updated`});
-        });
-    }
+    //     dynamodb.update(params, function(err, data) {
+    //         if (err) console.log(err);
+    //         else reply.send({message: `Item ${id} has been updated`});
+    //     });
+    // }
 
     // salary
-    if(salary !== undefined) {
-        var params = {
-            TableName: 'Employees',
-            Key: { 
-                PK : `ORG#${happyIncOrgId}`, 
-                SK: `#METADATA#${id}`
-            },
-            UpdateExpression: 'set #salary = :salary',
-            ExpressionAttributeNames: {'#salary' : 'salary'},
-            ExpressionAttributeValues: {
-                ':salary' : salary
-            },
-        };
+    // if(salary !== undefined) {
+    //     var params = {
+    //         TableName: 'Employees',
+    //         Key: { 
+    //             PK : `ORG#${happyIncOrgId}`, 
+    //             SK: `#METADATA#${id}`
+    //         },
+    //         UpdateExpression: 'set #salary = :salary',
+    //         ExpressionAttributeNames: {'#salary' : 'salary'},
+    //         ExpressionAttributeValues: {
+    //             ':salary' : salary
+    //         },
+    //     };
         
-        dynamodb.update(params, function(err, data) {
-            if (err) console.log(err);
-            else reply.send({message: `Item ${id} has been updated`});
-        });
-    }
+    //     dynamodb.update(params, function(err, data) {
+    //         if (err) console.log(err);
+    //         else reply.send({message: `Item ${id} has been updated`});
+    //     });
+    // }
 
     // commission_pct
-    if(commission_pct !== undefined) {
-        var params = {
-            TableName: 'Employees',
-            Key: { 
-                PK : `ORG#${happyIncOrgId}`, 
-                SK: `#METADATA#${id}`
-            },
-            UpdateExpression: 'set #commission_pct = :commission_pct',
-            ExpressionAttributeNames: {'#commission_pct' : 'commission_pct'},
-            ExpressionAttributeValues: {
-                ':commission_pct' : commission_pct
-            },
-        };
+    // if(commission_pct !== undefined) {
+    //     var params = {
+    //         TableName: 'Employees',
+    //         Key: { 
+    //             PK : `ORG#${happyIncOrgId}`, 
+    //             SK: `#METADATA#${id}`
+    //         },
+    //         UpdateExpression: 'set #commission_pct = :commission_pct',
+    //         ExpressionAttributeNames: {'#commission_pct' : 'commission_pct'},
+    //         ExpressionAttributeValues: {
+    //             ':commission_pct' : commission_pct
+    //         },
+    //     };
         
-        dynamodb.update(params, function(err, data) {
-            if (err) console.log(err);
-            else reply.send({message: `Item ${id} has been updated`});
-        });
-    }
+    //     dynamodb.update(params, function(err, data) {
+    //         if (err) console.log(err);
+    //         else reply.send({message: `Item ${id} has been updated`});
+    //     });
+    // }
     
     // manager_id
-    if(manager_id !== undefined) {
-        // manager_id
-        var params = {
-            TableName: 'Employees',
-            Key: { 
-                PK : `ORG#${happyIncOrgId}`, 
-                SK: `#METADATA#${id}`
-            },
-            UpdateExpression: 'set #manager_id = :manager_id',
-            ExpressionAttributeNames: {'#manager_id' : 'manager_id'},
-            ExpressionAttributeValues: {
-                ':manager_id' : manager_id
-            },
-        };
+    // if(manager_id !== undefined) {
+    //     // manager_id
+    //     var params = {
+    //         TableName: 'Employees',
+    //         Key: { 
+    //             PK : `ORG#${happyIncOrgId}`, 
+    //             SK: `#METADATA#${id}`
+    //         },
+    //         UpdateExpression: 'set #manager_id = :manager_id',
+    //         ExpressionAttributeNames: {'#manager_id' : 'manager_id'},
+    //         ExpressionAttributeValues: {
+    //             ':manager_id' : manager_id
+    //         },
+    //     };
 
-        dynamodb.update(params, function(err, data) {
-            if (err) console.log(err);
-            else reply.send({message: `Item ${id} has been updated`});
-        });
-    }
+    //     dynamodb.update(params, function(err, data) {
+    //         if (err) console.log(err);
+    //         else reply.send({message: `Item ${id} has been updated`});
+    //     });
+    // }
 
-    // manager_id
-    if(manager_id !== undefined) {
-        // manager_id
+    // physical_address
+    if(physical_address !== undefined) {
+        // physical_address
         var params = {
             TableName: 'Employees',
             Key: { 
