@@ -43,7 +43,7 @@ app.component('custom-form', {
                 
                 <tr>
                 <td>Phone Number</td>
-                  <td> <custom-number v-model="phone_number" /> </td>                  
+                  <td> <custom-phone v-model="phone_number" /> </td>                  
                 </tr>
                 
 <!--                <tr>-->
@@ -74,12 +74,12 @@ app.component('custom-form', {
                 
                 <tr>
                 <td>Date of Birth</td>
-                  <td> <custom-date v-model="date_of_birth" /> </td>                  
+                  <td> <custom-birth v-model="date_of_birth" /> </td>                  
                 </tr>
                 
                 <tr>
                 <td>Physical Address</td>
-                  <td> <custom-input v-model="physical_address" /> </td>                  
+                  <td> <custom-address v-model="physical_address" /> </td>                  
                 </tr>
                 
               </tbody>
@@ -156,6 +156,72 @@ app.component('custom-form', {
     }
 })
 app.component('custom-name', {
+    template:
+        `
+    <label>
+        {{label}}
+        <input type="text" v-model="inputValue" required>
+    </label>
+    `,
+    props: ['label', 'modelValue'],
+    computed:{
+        inputValue: {
+            get() {
+                return this.modelValue;
+            },
+            set(value) {
+                this.$emit('update:modelValue', value);
+            }
+        }
+    }
+
+})
+
+app.component('custom-phone', {
+    template:
+        `
+    <label>
+        {{label}}
+        <input type="number" v-model="inputValue" pattern='[\\+]\\d{2}[\\(]\\d{2}[\\)]\\d{4}[\\-]\\d{4}' required>
+    </label>
+    `,
+    props: ['label', 'modelValue'],
+    computed:{
+        inputValue: {
+            get() {
+                return this.modelValue;
+            },
+            set(value) {
+                this.$emit('update:modelValue', value);
+            }
+        }
+    }
+
+})
+
+app.component('custom-birth', {
+    template:
+        `
+    <label>
+        {{label}}
+        <input type="date" v-model="inputValue" required>
+    </label>
+    `,
+    props: ['label', 'modelValue'],
+    computed:{
+        inputValue: {
+            get() {
+                return this.modelValue;
+            },
+            set(value) {
+                this.$emit('update:modelValue', value);
+            }
+        }
+    }
+
+})
+
+app.component('custom-address', {
     template:
         `
     <label>

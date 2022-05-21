@@ -11,7 +11,10 @@ POST http://127.0.0.1:5000/items  HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": 10
+    "name": "asd",
+    "phone_number": 1111111111,
+    "date_of_birth": "1111111111",
+    "physical_address": "1111111111"
     
 }
 
@@ -25,11 +28,5 @@ Content-Type: application/json
 
 {
     "name": "s1",
-    "email": "s2@capitalone.com",
-    "phone_number": "1111111111",
-    "hire_date": "1000-01-01",
-    "job_id": "100",
-    "salary": 150000,
-    "commission_pct": 100,
-    "manager_id": "20"
+    "phone_number": "1111111111"
 }

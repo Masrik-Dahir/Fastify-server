@@ -13,7 +13,7 @@ const Item = {
                 PK: {type: 'string'},
                 name: {type: 'string'},
                 // email: {type: 'string'},
-                phone_number: {type: 'string'},
+                phone_number: {type: 'integer'},
                 // hire_date: {type: 'string'},
                 // job_id: {type: 'string'},
                 // salary: {type: 'integer'},
@@ -63,9 +63,13 @@ const postItemOpts = {
     schema: {
         body: {
             type: 'object',
-            required: ['name'],
+            required: ['name', 'phone_number', 'date_of_birth', 'physical_address'],
             properties: {
               name: { type: 'string' },
+              phone_number: { type: 'integer' },
+              date_of_birth: {type: 'string'},
+              physical_address: {type: 'string'},
+
             },
         },
         
