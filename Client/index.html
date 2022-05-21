@@ -33,14 +33,92 @@
 
 
 
-
-
-
   <div class="container mt-4" id="app">
     <button class="btn three"  onclick="location.href = './add.html';">
       Add Employee
     </button>
     <br>
+    <br>
+
+    <h3>Employee Detail</h3>
+    <table class="table table-bordered">
+      <thead v-if="isUpdate === false">
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Physical Address</th>
+      </tr>
+      </thead>
+
+
+
+      <div v-if="isVisible">
+        <tbody>
+        <tr v-for="user, index in users">
+
+          <td v-if= 'user.SK === ind '>{{user.SK.replace("#METADATA#", "")}}</td>
+          <td v-if= 'user.SK === ind'>{{user.name}}</td>
+          <td v-if= 'user.SK === ind'>{{user.phone_number}}</td>
+          <td v-if= 'user.SK === ind'>{{user.date_of_birth}}</td>
+          <td v-if= 'user.SK === ind'>{{user.physical_address}}</td>
+
+        </tr>
+        </tbody>
+      </div>
+
+
+
+
+
+        <table class="table table-bordered" v-if="isUpdate === true">
+          <thead>
+          <tr>
+            <th scope="col">Attributes</th>
+            <th scope="col">Inputs</th>
+
+
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <td> Employee ID </td>
+            <td> {{ind}} </td>
+          </tr>
+
+            <tr>
+              <td> Name </td>
+            <td> <input type="text" v-model="name"> </td>
+            </tr>
+
+            <tr>
+              <td> Phone Number </td>
+              <td> <input type="number" v-model="phone_number"> </td>
+            </tr>
+
+            <tr>
+              <td> Date of Birth </td>
+              <td> <input type="date" v-model="date_of_birth"> </td>
+            </tr>
+
+            <tr>
+              <td> Physical Address </td>
+              <td> <input type="text" v-model="physical_address"> </td>
+            </tr>
+
+          </tbody>
+
+    </table>
+
+      <button style="float: right" v-if="isUpdate === true" class="btn three"  @click.left="doit()">
+        Update Employee
+      </button>
+
+
+
+    </table>
     <br>
 
   <h3>Employee Listing</h3>
@@ -50,7 +128,7 @@
           <th scope="col">#</th>
           <th scope="col">Employee ID</th>
           <th scope="col">Name</th>
-          <th scope="col">Detail</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -64,51 +142,21 @@
               Detail
             </button>
 
+            <button class="btn update" @click.left="update(user.SK)">
+              Update
+            </button>
+
+            <button class="btn delete" @click.left="remove(user.SK)">
+              Delete
+            </button>
+
           </td>
         </tr>
       </tbody>
     </table>
 
     <br>
-    <h3>Employee Detail</h3>
-      <table class="table table-bordered">
-        <thead>
-        <tr>
-          <th scope="col">Employee ID</th>
-          <th scope="col">Name</th>
-<!--          <th scope="col">Email</th>-->
-          <th scope="col">Phone Number</th>
 
-<!--          <th scope="col">Manager ID</th>-->
-<!--          <th scope="col">Hire Date</th>-->
-<!--          <th scope="col">Commission (%)</th>-->
-<!--          <th scope="col">Job ID</th>-->
-          <th scope="col">Date of Birth</th>
-          <th scope="col">Physical Address</th>
-
-
-        </tr>
-        </thead>
-        <div v-if="isVisible">
-          <tbody>
-          <tr v-for="user, index in users">
-
-            <td v-if= 'user.SK === ind '>{{user.SK.replace("#METADATA#", "")}}</td>
-            <td v-if= 'user.SK === ind'>{{user.name}}</td>
-<!--            <td v-if= 'user.SK === ind'>{{user.email}}</td>-->
-            <td v-if= 'user.SK === ind'>{{user.phone_number}}</td>
-<!--            <td v-if= 'user.SK === ind'>{{user.manager_id}}</td>-->
-<!--            <td v-if= 'user.SK === ind'>{{user.hire_date}}</td>-->
-<!--            <td v-if= 'user.SK === ind'>{{user.commission_pct}}</td>-->
-<!--            <td v-if= 'user.SK === ind'>{{user.job_id}}</td>-->
-            <td v-if= 'user.SK === ind'>{{user.date_of_birth}}</td>
-            <td v-if= 'user.SK === ind'>{{user.physical_address}}</td>
-
-          </tr>
-          </tbody>
-        </div>
-
-      </table>
     </div>
 
 

@@ -234,3 +234,25 @@ button {
 .three:hover {
     transform:scale(1.2,1.2);
 }
+
+.update {
+    background: linear-gradient(whitesmoke, #D6F3B7);
+    border:2px solid gray;
+    transition: all 0.4s;
+    transition-timing-function:cubic-bezier(0.5, 3, 0, 1);
+}
+
+.update:hover {
+    transform:scale(1.2,1.2);
+}
+
+.delete {
+    background: linear-gradient(whitesmoke, #F9AEAE);
+    border:2px solid gray;
+    transition: all 0.4s;
+    transition-timing-function:cubic-bezier(0.5, 3, 0, 1);
+}
+
+.delete:hover {
+    transform:scale(1.2,1.2);
+}
