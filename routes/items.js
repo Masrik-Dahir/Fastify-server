@@ -18,7 +18,9 @@ const Item = {
                 job_id: {type: 'string'},
                 salary: {type: 'integer'},
                 commission_pct: {type: 'number'},
-                manager_id: {type: 'string'}
+                manager_id: {type: 'string'},
+                date_of_birth: {type: 'string'},
+                physical_address: {type: 'string'},
             }
         } 
 }
@@ -33,7 +35,6 @@ const Summery = {
                 }
         } 
 }
-
 
 // Option for get all items
 const getItemsOpts = {

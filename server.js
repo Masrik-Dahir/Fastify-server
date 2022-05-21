@@ -1,15 +1,17 @@
 const express = require('express');
 
 const fastify = require('fastify', 'cors')({logger: true})
+
 fastify.addHook('onSend', function(request, reply, payload, done) {
     reply.headers({
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
-        "Access-Control-Allow-Headers": "append,delete,entries,foreach,get,has,keys,set,values,Authorization",
-        "Access-Control-Expose-Headers": "Content-Length, X-JSON",
+        "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+        // "Access-Control-Allow-Headers": "content-type, append,delete,entries,foreach,get,has,keys,set,values,Authorization",
+        // "Access-Control-Expose-Headers": "Origin, Content-Type, X-Auth-Token, Content-Length, X-JSON",
     })
     done()
   })
+
   
 fastify.register(require('fastify-swagger'), {
     exposeRoute: true,
@@ -21,6 +23,10 @@ fastify.register(require('fastify-swagger'), {
     }
 })
 
+fastify.register(require('fastify-cors'), {
+    credentials: true,
+    optionsSuccessStatus: 200
+ })
 
 fastify.register(require('./routes/items'))
 

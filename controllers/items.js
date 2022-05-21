@@ -59,6 +59,8 @@ const addItem = (req, reply) => {
     const {salary} = req.body
     const {commission_pct} = req.body
     const {manager_id} = req.body
+    const {date_of_birth} = req.body
+    const {physical_address} = req.body
 
 
     const happyIncOrgId = "c89608cf-39a7-4589-9eea-173ae87192da";
@@ -76,7 +78,9 @@ const addItem = (req, reply) => {
         job_id: job_id,
         salary: salary,
         commission_pct: commission_pct,
-        manager_id: manager_id
+        manager_id: manager_id,
+        date_of_birth: date_of_birth,
+        physical_address: physical_address,
         }
     };
     
@@ -121,6 +125,8 @@ const updateItem = (req, reply) => {
     const {salary} = req.body
     const {commission_pct} = req.body
     const {manager_id} = req.body
+    const {date_of_birth} = req.body
+    const {physical_address} = req.body
 
     const happyIncOrgId = "c89608cf-39a7-4589-9eea-173ae87192da";
     // name
@@ -283,6 +289,50 @@ const updateItem = (req, reply) => {
             ExpressionAttributeNames: {'#manager_id' : 'manager_id'},
             ExpressionAttributeValues: {
                 ':manager_id' : manager_id
+            },
+        };
+
+        dynamodb.update(params, function(err, data) {
+            if (err) console.log(err);
+            else reply.send({message: `Item ${id} has been updated`});
+        });
+    }
+
+    // manager_id
+    if(manager_id !== undefined) {
+        // manager_id
+        var params = {
+            TableName: 'Employees',
+            Key: { 
+                PK : `ORG#${happyIncOrgId}`, 
+                SK: `#METADATA#${id}`
+            },
+            UpdateExpression: 'set #physical_address = :physical_address',
+            ExpressionAttributeNames: {'#physical_address' : 'physical_address'},
+            ExpressionAttributeValues: {
+                ':physical_address' : physical_address
+            },
+        };
+
+        dynamodb.update(params, function(err, data) {
+            if (err) console.log(err);
+            else reply.send({message: `Item ${id} has been updated`});
+        });
+    }
+
+    // date_of_birth
+    if(date_of_birth !== undefined) {
+        // date_of_birth
+        var params = {
+            TableName: 'Employees',
+            Key: { 
+                PK : `ORG#${happyIncOrgId}`, 
+                SK: `#METADATA#${id}`
+            },
+            UpdateExpression: 'set #date_of_birth = :date_of_birth',
+            ExpressionAttributeNames: {'#date_of_birth' : 'date_of_birth'},
+            ExpressionAttributeValues: {
+                ':date_of_birth' : date_of_birth
             },
         };
 

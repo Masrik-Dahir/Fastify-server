@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Form</title>
-    <link rel="stylesheet" href="css/default.css"/>
+    <!-- Bootstrap CSS 4.3.1 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+    <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- VueJS -->
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="vue.js/add.js" defer></script>
+    <script src="vue.js/add.js" defer> </script>
 </head>
 <body>
+
+<div class="topnav" style="font-family: georgia,serif; margin-left: 0px">
+    <a href="index.html">List Employee</a>
+    <a class="active" href="add.html">Create Employee</a>
+    <a href="detail.html">Employee Detail</a>
+</div>
+
+<br>
 
 <div id="app" v-cloak>
     <custom-form/>
