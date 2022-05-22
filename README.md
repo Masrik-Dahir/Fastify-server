@@ -8,6 +8,7 @@
 1. aws configure # <AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format>
 
 ### Configure and Start Server (using fastify): ###
+* current cirectory: ~/Fastify_server
 1. cd Server
 2. ./requirements.sh 
 
@@ -18,6 +19,7 @@ Items  | Links
 
 
 ### Configure and Start Client (using vue): ###
+* current cirectory: ~/Fastify_server
 1. cd Client
 2. ./requirements.sh
 
