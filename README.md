@@ -4,16 +4,20 @@
 
 ### Clone Repository: ###
 ```
-git clone https://github.com/Masrik-Dahir/Fastify_server.git; cd Fastify_server;
+git clone https://github.com/Masrik-Dahir/Fastify_server.git; 
+cd Fastify_server;
 ```
 
 ### Configure Database (using dynamoDB): ###
-1. aws configure # <AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format>
+```
+aws configure # <AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format>
+```
 
 ### Configure and Start Server: ###
 > current direcotry: ~/Fastify_server
 ```
-cd Server; ./requirements.sh; cd ..;
+cd Server; 
+./requirements.sh;
 ```
 
 Items  | Links
@@ -25,6 +29,19 @@ Items  | Links
 ### Configure and Start Client [current directory: ~/Fastify_server]: ###
 > current direcotry: ~/Fastify_server
 ```
-cd Client; ./requirements.sh;
+cd Client; 
+./requirements.sh;
 ```
 
+
+## Example (Ubuntu, Windows) ##
+```
+git clone https://github.com/Masrik-Dahir/Fastify_server.git; 
+cd Fastify_server;
+aws configure;
+cd Server; 
+./requirements.sh;
+cd ..;
+cd Client; 
+./requirements.sh;
+```
