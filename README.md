@@ -30,7 +30,7 @@ Items  | Links
   Test API  | [test.http](https://github.com/Masrik-Dahir/Fastify_server/blob/master/Server/test.http)
 
 
-### Configure and Start Client [current directory: ~/Fastify_server]: ###
+### Configure and Start Client: ###
 > current direcotry: ~/Fastify_server
 ```
 cd Client; 
