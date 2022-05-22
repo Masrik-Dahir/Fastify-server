@@ -18,6 +18,6 @@ Items  | Links
 
 
 ### Configure and Start Client (using vue): ###
-1. cd Server
+1. cd Client
 2. ./requirements.sh
 
