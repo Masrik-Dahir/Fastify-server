@@ -1,9 +1,5 @@
 # Fastify_server
 
-## Configure: ##
-* git clone https://github.com/Masrik-Dahir/Fastify_server.git
-* cd Fastify_server
-
 ### Configure Database (using dynamoDB): ###
 1. aws configure # <AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format>
 
