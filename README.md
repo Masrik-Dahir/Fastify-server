@@ -13,7 +13,7 @@ git clone https://github.com/Masrik-Dahir/Fastify_server.git; cd Fastify_server;
 ### Configure and Start Server: ###
 > current direcotry: ~/Fastify_server
 ```
-cd Server; ./requirements.sh;
+cd Server; ./requirements.sh; cd ..;
 ```
 
 Items  | Links
