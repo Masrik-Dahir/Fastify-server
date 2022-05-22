@@ -7,7 +7,8 @@
 ### Configure Database (using dynamoDB): ###
 1. aws configure # <AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format>
 
-### Configure and Start Server [current direcotry: ~/Fastify_server]: ###
+### Configure and Start Server: ###
+> [current direcotry: ~/Fastify_server]
 1. cd Server
 2. ./requirements.sh 
 
