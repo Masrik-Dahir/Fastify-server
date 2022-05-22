@@ -4,9 +4,10 @@
 * git clone https://github.com/Masrik-Dahir/Fastify_server.git
 * cd Fastify_server
 
+### Configure Database (using dynamoDB): ###
+1. aws configure # <AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format>
 
-
-### Start Server (using fastify): ###
+### Configure and Start Server (using fastify): ###
 1. cd Server
 2. ./requirements.sh 
 
@@ -16,7 +17,7 @@ Items  | Links
   Test API  | [test.http](https://github.com/Masrik-Dahir/Fastify_server/blob/master/Server/test.http)
 
 
-### Start Client (using vue): ###
+### Configure and Start Client (using vue): ###
 1. cd Server
 2. ./requirements.sh
 
