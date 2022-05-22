@@ -1,7 +1,7 @@
 let app = Vue.createApp({
     data: function(){
         return {
-            greeting: "Hello Vue 3",
+            greeting: "Hello vue 3",
             isVisible: false,
         }
     },
