@@ -13,6 +13,7 @@ cd Fastify_server;
 
 ### Configure Database (using dynamoDB): ###
 ```
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi;
 aws configure # <AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format>
 ```
 
@@ -41,6 +42,7 @@ cd Client;
 ```
 git clone https://github.com/Masrik-Dahir/Fastify_server.git; 
 cd Fastify_server;
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi;
 aws configure;
 cd Server; 
 ./requirements.sh;
