@@ -9,8 +9,9 @@
 
 ### Configure and Start Server: ###
 > current direcotry: ~/Fastify_server
-1. cd Server
-2. ./requirements.sh 
+```
+cd Server; ./requirements.sh;
+```
 
 Items  | Links
   ------------- | -------------
@@ -19,6 +20,8 @@ Items  | Links
 
 
 ### Configure and Start Client [current directory: ~/Fastify_server]: ###
-1. cd Client
-2. ./requirements.sh
+> current direcotry: ~/Fastify_server
+```
+cd Client; ./requirements.sh;
+```
 
