@@ -7,8 +7,7 @@
 ### Configure Database (using dynamoDB): ###
 1. aws configure # <AWS Access Key ID, AWS Secret Access Key, Default region name, Default output format>
 
-### Configure and Start Server (using fastify): ###
-* current cirectory: ~/Fastify_server
+### Configure and Start Server [current direcotry: ~/Fastify_server]: ###
 1. cd Server
 2. ./requirements.sh 
 
@@ -18,8 +17,7 @@ Items  | Links
   Test API  | [test.http](https://github.com/Masrik-Dahir/Fastify_server/blob/master/Server/test.http)
 
 
-### Configure and Start Client (using vue): ###
-* current cirectory: ~/Fastify_server
+### Configure and Start Client [current directory: ~/Fastify_server]: ###
 1. cd Client
 2. ./requirements.sh
 
