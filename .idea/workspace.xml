@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8de9ea0c-3720-40b6-858a-9c677459a0f0" name="Changes" comment="officially done!">
-      <change afterPath="$PROJECT_DIR$/Client/vue/add.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/vue/detail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/vue/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/vue.js/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/vue.js/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +48,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Repo\.vscode\Server - Copy" />
       <recent name="E:\Repo\.vscode\Server - Copy\Server" />
     </key>
   </component>
@@ -95,7 +93,7 @@
       <workItem from="1652922767383" duration="11824000" />
       <workItem from="1652974750590" duration="8514000" />
       <workItem from="1653156093056" duration="13698000" />
-      <workItem from="1653178606185" duration="316000" />
+      <workItem from="1653178606185" duration="1157000" />
     </task>
     <task id="LOCAL-00001" summary="works so far">
       <created>1652844964623</created>
@@ -125,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653177258708</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="officially done!">
+      <created>1653178941206</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653178941206</updated>
+    </task>
+    <task id="LOCAL-00006" summary="officially done!">
+      <created>1653178978864</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653178978864</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,13 +1,22 @@
 # Fastify_server
 
-Configure:
-
-1. git clone https://github.com/Masrik-Dahir/Fastify_server.git
-2. cd Fastify_server
-3. requirements.sh
-4. npm run dev 
-
-Documentation for the HTTP API: http://127.0.0.1:5000/docs/static/index.html#/
+## Configure: ##
+* git clone https://github.com/Masrik-Dahir/Fastify_server.git
+* cd Fastify_server
 
 
-Test for the HTTP API: test.http
+
+### Start Server (using fastify): ###
+1. cd Server
+2. ./requirements.sh 
+
+Items  | Links
+  ------------- | -------------
+  API Documentation  | http://127.0.0.1:5000/docs/static/index.html#/
+  Test API  | [test.http](https://github.com/Masrik-Dahir/Fastify_server/blob/master/Server/test.http)
+
+
+### Start Client (using vue): ###
+1. cd Server
+2. ./requirements.sh
+
