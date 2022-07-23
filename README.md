@@ -2,6 +2,7 @@
 [![Jekyll site CI](https://github.com/Masrik-Dahir/Fastify_server/actions/workflows/jekyll.yml/badge.svg)](https://github.com/Masrik-Dahir/Fastify_server/actions/workflows/jekyll.yml)
 [![CodeQL](https://github.com/Masrik-Dahir/Fastify_server/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Masrik-Dahir/Fastify_server/actions/workflows/codeql-analysis.yml)
 [![Node.js CI](https://github.com/Masrik-Dahir/Fastify_server/actions/workflows/node.js.yml/badge.svg)](https://github.com/Masrik-Dahir/Fastify_server/actions/workflows/node.js.yml)
+![Visitor](https://visitor-badge.laobi.icu/badge?page_id=Masrik-Dahir.repoName)
 
 ## Configure ##
 
